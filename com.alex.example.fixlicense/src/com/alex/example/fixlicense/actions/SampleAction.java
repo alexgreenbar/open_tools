@@ -189,7 +189,7 @@ public class SampleAction implements IWorkbenchWindowActionDelegate {
 	}
 	
 	private String getLicenseContent(String licenseFileName) {
-		URL url = Activator.getDefault().getBundle().getResource(licenseFileName);
+		URL url = Activator.getDefault().getBundle().getEntry(licenseFileName);
 		try {
 			StringBuffer sb = new StringBuffer();
 			BufferedReader br = new BufferedReader(new InputStreamReader(url.openStream()));
